@@ -13,27 +13,27 @@ Bu proje, görüntü sınıflandırma ve model değerlendirmesi konularında ça
 **Veri Seti ve Ön İşleme**
 Bu projede, görüntü sınıflandırma için uygun bir veri seti kullanılmıştır. Veri seti, etiketli görüntülerden oluşur ve iki ana bölümden oluşmaktadır:
 
-*Eğitim Seti: Modelin eğitilmesi için kullanılan veri seti.
-*Test Seti: Modelin doğruluğunu değerlendirmek için kullanılan veri seti.
+* Eğitim Seti: Modelin eğitilmesi için kullanılan veri seti.
+* Test Seti: Modelin doğruluğunu değerlendirmek için kullanılan veri seti.
 
 Veri setine yönelik ön işleme adımları:
 
-*Görüntü Augmentasyonu: Eğitim sırasında veri genişletme teknikleri kullanılır (örneğin, rastgele kırpma, döndürme vb.).
-*Normalizasyon: Görüntüler, modelin daha iyi öğrenebilmesi için normalize edilir. 
+* Görüntü Augmentasyonu: Eğitim sırasında veri genişletme teknikleri kullanılır (örneğin, rastgele kırpma, döndürme vb.).
+* Normalizasyon: Görüntüler, modelin daha iyi öğrenebilmesi için normalize edilir. 
 
 **Modelin Eğitilmesi ve Değerlendirilmesi**
-*Model, derin bir evrişimsel sinir ağı (CNN) mimarisi kullanılarak tasarlanmıştır. Aşağıda modelin ana katmanları bulunmaktadır:
+* Model, derin bir evrişimsel sinir ağı (CNN) mimarisi kullanılarak tasarlanmıştır. Aşağıda modelin ana katmanları bulunmaktadır:
 Evrişim Katmanları (Convolutional Layers): Görüntülerin özelliklerini çıkarmak için kullanılır.
 Max-Pooling Katmanları: Görüntü boyutlarını küçültmek için kullanılır.
 Tam Bağlı Katmanlar (Fully Connected Layers): Özellikler çıkarıldıktan sonra sınıflandırma yapılır. 
 
-*Eğitim Süreci
+* Eğitim Süreci
 Kayıp Fonksiyonu (Loss Function): CrossEntropyLoss
 Optimizasyon Yöntemi (Optimizer): Adam
 Öğrenme Oranı Azaltma: StepLR (Öğrenme oranı 10 adımda bir yarıya düşürülür)
 Modelin eğitilmesi sırasında doğruluk (accuracy) ve kayıp (loss) izlenir.
 
-*Model Değerlendirmesi
+* Model Değerlendirmesi
 Model, aşağıdaki üç test setinde değerlendirilmiştir:
 
 Orijinal Test Seti: Modelin orijinal, manipülasyona uğramamış veri seti üzerindeki doğruluğu.
@@ -41,10 +41,10 @@ Manipüle Edilmiş Test Seti: Görüntülerdeki renk manipülasyonlarının mode
 Düzeltilmiş Test Seti: Renk düzeltmesi yapılan görüntüler üzerinde model doğruluğu.
 
 **Görüntü Manipülasyonu ve Düzeltme**
-*Manipülasyon
+* Manipülasyon
 Test görüntüleri üzerinde yapılan manipülasyonlar, parlaklık artırma gibi basit işlemleri içerir. Manipülasyon işleminden sonra, modelin doğruluğu gözlemlenir.
 
-*Renk Düzeltme
+* Renk Düzeltme
 Görüntülerdeki renk bozulmalarını düzeltmek için kullanılan teknikler, genellikle renk dengeleme yöntemlerini içerir. Bu düzeltme işlemi sonrası modelin doğruluğu tekrar hesaplanır.
 
 **Sonuçlar ve Görselleştirme**
