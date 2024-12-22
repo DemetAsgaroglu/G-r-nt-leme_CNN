@@ -1,1 +1,1 @@
-# G-r-nt-leme_CNN
+# Goruntuısleme_CNN
